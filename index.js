@@ -138,10 +138,23 @@ console.log(CemberinAlani(15,pi));
 	// ÖRNEK: sayilar dizisi içerisinde 45 sayısı 3 kere yazılmış. "45 sayısı 3 tekrar edilmiştir" stringini `tekraredensayilar` dizisine aktaracağız.
 	// 💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir nesne tanımlamalısınız, bu görevi yapabilmek için en az 2 kere döngü yazmalısınız. Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
 
-     
-
-
-	
+    tekraredensayilar=[];	
+	let newArray={};
+      
+    for(let i=0; i<sayilar.length;i++){
+       if (newArray[sayilar[i]]==undefined) {
+		newArray[sayilar[i]]=1;//newArray=1
+	   }
+	   else{
+		newArray[sayilar[i]]+=1;
+	   }
+	}
+    for (let key in newArray) {
+		if (newArray[key]>1) {
+		     tekraredensayilar.push(`${key} sayısı ${newArray[key]} kere tekrar edilmiştir`);
+		}
+	}
+  console.log(tekraredensayilar);
 	
 
 
